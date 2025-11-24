@@ -72,8 +72,26 @@ find_stop_codon <- function(seq, read_fr){
   return(pos)
 }
 
-find_open_frames <- function(seq){
+find_all_open_frames <- function(seq, read_fr){
+  # Get start and stop positions
+  start <- find_start_codon(seq, read_fr) # still missing some start codons
+  stop <- find_stop_codon(seq, read_fr)
   
+  # Find a reading-frame by taking the first start position and 
+  # adding the first following stop position+2 a vector of dimension (1,2)
+  first_start <- start[1]
+  for (pos in stop){
+    if (pos > start[1]){
+      first_stop <- pos
+      break
+    }
+  }
+  first_stop <- stop
+  open_frames <- matrix(c(), nrows = 1, ncols = 2)
+  
+  # Next, find the next start codon that is bigger than the previous stop codon
+  # Add following open reading frames to the vector as new rows
+  # Return the vector
 }
 
 

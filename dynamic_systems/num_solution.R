@@ -12,7 +12,7 @@ i <- 1 # Placeholder
 # Repeat until reaching final t
 while (num_sol[i, 1] < 20){
   # Calculate f(t,x), which is the tangent to the curve i am trying to solve at the current point
-  h <- growth_function(num_sol[i,2], P)
+  h <- growth_function(n=num_sol[i,2], P=P)
   
   # Calculate delta_n = f(t,n)*delta_t
   delta_n <- h * delta_t
