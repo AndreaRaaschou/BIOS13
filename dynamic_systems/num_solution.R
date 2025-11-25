@@ -1,7 +1,7 @@
 # 4) Solve the logistic equation manually
 rm(list = ls())
 setwd('/Users/andrearaaschou/courses/BIOS13/github/dynamic_systems')
-source('functions.R')
+source('functions1.R')
 
 # Initiate variables
 num_sol <- matrix(c(0, 1), 1, 2) # num_sol has structure (t0, n0)

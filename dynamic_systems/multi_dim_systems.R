@@ -1,3 +1,4 @@
+library(deSolve)
 rm(list = ls())
 setwd('/Users/andrearaaschou/courses/BIOS13/github/dynamic_systems')
 source('functions2.R')
@@ -38,11 +39,18 @@ plot(out[,2], out[,3], type = 'l',
 jacobian(P)
 cycle_per(P)
 
-# 2a)
+# 2c and 2d)
+source('functions2.R')
 
+# list of parameters in order: (r, a, mu, K)
+P = c(2, 1, 3, 10)
+# initial population sizes of prey (n) and predator (p)
+np0 = c(2, 2)
 
+out <- ode(y = np0, func = LV_sys2, times = seq(1, 100, by = 0.01), parms = P)
 
-
+plot_isoclines_lg(P[1], P[2], P[3], P[4], out)
+plot_simulation(out)
 
 
 
