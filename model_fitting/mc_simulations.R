@@ -1,4 +1,4 @@
-# Simulate the Ringlets dynamics 100 years into the future
+# Simulate the Ringlets dynamics 100 years into the future using Monte-Carlo simulations
 rm(list = ls())
 source("functions.R")
 
