@@ -1,4 +1,4 @@
-# Traveling salesman problem - NOT FINISHED
+# Traveling salesman problem 
 # Calculate the shortest distance by car between the following 
 # Swedish cities: Lund, Kalmar, Stockholm, Karlstad, Göteborg, Jönköping.
 rm(list = ls())
