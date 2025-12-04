@@ -9,7 +9,7 @@ n0 <- 1 # initial population size
 timevec <- seq(0, 20, by=0.01) # Vector of time-points for the output
 
 # 1) Plot growth function against population size 
-y <- growth_function(n=seq(1,120, by=0.1), P)
+y <- growth_function(n=seq(1,120, by=0.1),10, P)
 plot(y, type='l')
 
 # 2) Plot population size as a function of time 
