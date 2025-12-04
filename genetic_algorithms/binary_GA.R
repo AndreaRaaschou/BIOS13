@@ -11,6 +11,7 @@ mutation_rate <- 0.01    # how large percentage of the genes experience mutation
 mutation_free <- 10      # number of top ranked individuals that should be saved from mutation
 
 
+
 # Define Functions
 
 Create_pop <- function(pop_size,gene_number) {    # This function creates a random population of pop_size chromosomes
